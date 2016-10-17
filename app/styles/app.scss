@@ -5,7 +5,10 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 // Import Bootstrap
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
-
+@font-face {
+  font-family: "custom";
+  src: url("../fonts/stoehr_numbers_1-2.ttf");
+}
 *,
 *::before,
 *::after {
@@ -14,4 +17,29 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 
 img {
   max-width: 100%;
+}
+
+body {
+  background-color: orange;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'custom';
+  color: white;
+  font-size: 60px;
+  padding-bottom: 20px;
+}
+
+#like-btn{
+  padding: 30px;
+  display: block;
+  width: 20%;
+  margin: 0 auto;
+  font-size: 30px;
+  font-family: 'custom';
+  border-radius: 5px;
+  background-color: purple;
+  color: white;
+  box-shadow: 2px 2px black;
 }
