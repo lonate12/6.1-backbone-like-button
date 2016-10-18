@@ -15,7 +15,7 @@ var LikeButton = Backbone.Model.extend({
     $('#like-span').text(' Likes');
   },
   toJSON: function(options){
-    if(this.get('likes') === 1){
+    if (this.get('likes') === 1){
       $('#like-span').text('Like');
     }
 
