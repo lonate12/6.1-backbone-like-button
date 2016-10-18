@@ -1,5 +1,6 @@
 var Backbone = require('backbone');
 var $ = require('jquery');
+var _ = require('underscore');
 
 var LikeButton = Backbone.Model.extend({
   defaults: {
@@ -13,10 +14,13 @@ var LikeButton = Backbone.Model.extend({
     $('#num-span').text(this.get('likes'));
     $('#like-span').text(' Likes');
   },
-  toJSON: function(){
+  toJSON: function(options){
     if(this.get('likes') === 1){
       $('#like-span').text('Like');
     }
+
+    // return _.clone(this.attributes); Could use this to restore the original toJSON functionality
+    return Backbone.Model.prototype.toJSON.call(this, options);
   }
 });
 
